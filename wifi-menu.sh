@@ -6,7 +6,7 @@
 # 
 clear
 echo "+=============================================================================+"
-echo "| MacOS X Network Settings Adjuster Tool Menu  - by Daniel Arauz - Year:2018  |" 
+echo "| MacOS Wi-Fi Network Adjuster Tools Menu                                     |" 
 echo "+=============================================================================+"
 PS3='Please input your choice number, then press [ENTER]: '
 options=("Run WiFi Checks" "Add a WiFi Network" "Remove a WiFi Network" "Set an SSID First" "Set Network Services Order" "Scan for WiFi Networks" "Quit")
