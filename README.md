@@ -4,7 +4,7 @@ This is a collection of scripts to adjust WiFi Network settings on MacOS.
 Keep all these files in the same directory if you want to run them from the Menu. 
 To get to the Menu run the menu.sh script. All scripts can run independenly as well.
 
-<b>The Menu includes:<b>
+<b>The Menu includes:</b>
  1) WiFi Check
  2) Add a WiFi Network
  3) Remove a Preferred WiFi Network
@@ -15,14 +15,14 @@ To get to the Menu run the menu.sh script. All scripts can run independenly as w
  8) Quit
 
 
-<b>Note: Scripts ready to use:<b> 
+<b>Note: Scripts ready to use:</b> 
 * WiFi Check
 * Add a WiFi Network
 * Remove a Preferred WiFi Network
 * Remove all Preferred WiFi Networks
 * Scan for WiFi Networks
 
-<b>Scripts not ready yet:<b>
+<b>Scripts not ready yet:</b>
 * Move an SSID to top
 * Set Network Services Order
 
