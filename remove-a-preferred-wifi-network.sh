@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Script Name: remove-a-wifi-network.sh
+#Script Name: remove-a-preferred-wifi-network.sh
 
 #Author: Daniel Arauz
 
