@@ -6,7 +6,7 @@
 
 #Date: May 26, 2018
 
-#Description: This script is to remove all Preferred  Wireless  Network on MacOS. 
+#Description: This script is to remove all Preferred  Wireless Network on MacOS. 
 
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
