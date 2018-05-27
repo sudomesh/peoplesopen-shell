@@ -1,5 +1,13 @@
 #!/bin/bash
-# By Daniel Arauz - California - May 2018. 
+
+#Script Name: menu.sh
+
+#Author: Daniel A.
+
+#Date: May 26, 2018
+
+#Description: This script it is a menu to run commands to adjust wifi network. Some commands were found online, from different sources.
+
 clear
 echo "+=============================================================================+"
 echo "| MacOS X Network Settings Adjuster Tool Menu  - by Daniel Arauz - Year:2018  |" 
