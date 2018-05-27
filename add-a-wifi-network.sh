@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Script Name: menu.sh
+#Script Name: add-a-wifi-network.sh 
 
 #Author: Daniel A.
 
