@@ -20,9 +20,8 @@ networksetup -listpreferredwirelessnetworks en0
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| WiFi Connection Details:                                                    |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
-AIRPORTTRIGGER="./airport -I"
-$AIRPORTTRIGGER
+AIRPORTINTERFACE="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I"
+$AIRPORTINTERFACE
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Press enter to continue"

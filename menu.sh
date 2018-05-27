@@ -48,10 +48,10 @@ do
                 sh listing.sh
                 ;;
 	"Quit")
-            	
-		clear
+      		clear
             	break
             	;;
         *) echo invalid option;;
     esac
 done
+
