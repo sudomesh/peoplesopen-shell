@@ -40,7 +40,7 @@ sudo networksetup -setairportnetwork "$WiFiDevice" "$SSIDvar" "$SSIDWiFiPasswd"
 sleep 12
 clear
 echo "+- - - - - - - - - - - - - - - - - - - -+"
-echo "The new WiFi Network details:"
+echo "Success! The new WiFi Network details:"
 echo "+- - - - - - - - - - - - - - - - - - - -+"
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 AIRPORTTRIGGER="./airport -I"
