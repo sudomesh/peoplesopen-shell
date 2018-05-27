@@ -14,6 +14,8 @@ To get to the Menu run the menu.sh script. All scripts can run independenly as w
  7) Scan for WiFi Networks
  8) Quit
 
+Screenshot: https://github.com/wwwhtml/wifi-scripts-for-macos/blob/master/macos-wifi-tool-menu.png
+
 
 <b>Note: Scripts ready to use:</b> 
 * WiFi Check
