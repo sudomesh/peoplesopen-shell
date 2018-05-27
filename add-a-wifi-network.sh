@@ -33,6 +33,8 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - -+"
 echo "Connecting..."
 echo "If asked, input your admin password." 
+echo
+echo "Please wait... process timed to 12 sec."
 echo "+- - - - - - - - - - - - - - - - - - - -+"
 sudo networksetup -setairportnetwork "$WiFiDevice" "$SSIDvar" "$SSIDWiFiPasswd"
 sleep 12
@@ -45,7 +47,7 @@ AIRPORTTRIGGER="./airport -I"
 $AIRPORTTRIGGER 
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-read -p "Press enter to continue"
+read -p "Press [ENTER] to continue"
 clear
 
 

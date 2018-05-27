@@ -10,21 +10,20 @@
 
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "| Remove All Preferred Wireless Network:                                      |"
+echo "| Remove All Preferred Wireless Networks:                                      |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo
 echo
-echo "Are you sure you want to remove all Preferred Wireless Neworks?"
+echo "Are you sure you want to remove all Preferred Wireless Networks?"
 echo
 echo
 echo "To Stop this process:  CTRL + C"
-echo
 read -p "To continue to remove all Preferred Wireless Networks press [ENTER] : "
 networksetup -removeallpreferredwirelessnetworks en0
 echo 
 echo "Done!"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-read -p "Press enter to continue"
+read -p "Press [ENTER] to continue"
 clear
 

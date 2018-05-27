@@ -13,24 +13,28 @@ echo "+=========================================================================
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |" 
 echo "+=============================================================================+"
 PS3='Please input your choice number, then press [ENTER]: '
-options=("Run WiFi Checks" "Add a WiFi Network" "Remove a WiFi Network" "Set an SSID First" "Set Network Services Order" "Scan for WiFi Networks" "Quit")
+options=("WiFi Check" "Add a WiFi Network" "Remove a Preferred WiFi Network" "Remove all Preferred WiFi Networks" "Move an SSID to top" "Set Network Services Order" "Scan for WiFi Networks" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-	"Run WiFi Checks")
-		sh run-wifi-checks.sh
+	"WiFi Check")
+		sh wifi-check.sh
 		sh listing.sh
 		;;
         "Add a WiFi Network")
 		sh add-a-wifi-network.sh
 		sh listing.sh
 		;;
-	"Remove a WiFi Network")
-		sh remove-a-wifi-network.sh
+	"Remove a Preferred WiFi Network")
+		sh remove-a-preferred-wifi-network.sh
 		sh listing.sh
 		;;
-        "Set an SSID First")
-		sh set-an-ssid-first.sh
+        "Remove all Preferred WiFi Networks")
+                sh remove-all-preferred-wifi-networks.sh
+                sh listing.sh
+                ;;
+        "Move an SSID to top")
+		sh move-ssid-to-top.sh
                 sh listing.sh
                 ;;
 	"Set Network Services Order") 
