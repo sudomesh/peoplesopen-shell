@@ -1,14 +1,18 @@
 #!/bin/bash
-# Script by: Daniel Arauz - May 23, 2018. California.
-clear
 
-# NEEDS AN IF STATEMENT TO CHECK IF FILE EXIST, SO IT DELETES IT BEFORE CONTINUEING.
+#Script Name: set-network-services-order.sh
+
+#Author: Daniel Arauz
+
+#Date: May 26, 2018
+
+#Description: This script sets Network Services Order. 
+
+clear
 if [ -e NewNetworkServiceOrder.dat ]
 	then
 	rm -r NewNetworkServiceOrder.dat
 fi
-
-
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| SET NETWORK SERVICES ORDER:                                                 |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"

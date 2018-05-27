@@ -12,7 +12,7 @@ clear
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |"
 echo "+=============================================================================+"
-echo " 1) WiFi Checks"
+echo " 1) WiFi Check"
 echo " 2) Add a WiFi Network"
 echo " 3) Remove a Preferred WiFi Network"
 echo " 4) Remove all Preferred Wifi Network"
