@@ -1,4 +1,13 @@
 #!/bin/bash
+
+#Script Name: wifi-check.sh
+
+#Author: Daniel Arauz
+
+#Date: May 26, 2018
+
+#Description: This script checks for Network Services and SSIDs order, and show current WiFi details.
+
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Network Services Order:                                                     |"

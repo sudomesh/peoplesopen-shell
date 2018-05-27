@@ -2,7 +2,7 @@
 
 #Script Name: menu.sh
 
-#Author: Daniel A.
+#Author: Daniel Arauz
 
 #Date: May 26, 2018
 

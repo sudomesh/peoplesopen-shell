@@ -2,7 +2,7 @@
 
 #Script Name: add-a-wifi-network.sh 
 
-#Author: Daniel A.
+#Author: Daniel Arauz
 
 #Date: May 26, 2018
 

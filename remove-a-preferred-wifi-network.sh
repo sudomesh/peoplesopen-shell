@@ -1,5 +1,13 @@
 #!/bin/bash
-# Script by: Daniel Arauz - May 2018 - California.
+
+#Script Name: remove-a-wifi-network.sh
+
+#Author: Daniel Arauz
+
+#Date: May 26, 2018
+
+#Description: This script is to removes a Preferred Wireless  network.
+
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Remove a WiFi Network:                                                      |"

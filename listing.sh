@@ -1,21 +1,22 @@
 #!/bin/bash
 
-#Script Name: menu.sh
+#Script Name: listing.sh
 
-#Author: Daniel A.
+#Author: Daniel Arauz
 
 #Date: May 26, 2018
 
-#Description: This script it is hack to paste the menu on screen. For some reason, the menu.sh only shows the menu once.
+#Description: This script its a lame hack to paste the menu on screen. For some reason, the menu.sh only shows the menu once.
 
 clear
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |"
 echo "+=============================================================================+"
-echo " 1) Run WiFi Checks"
+echo " 1) WiFi Checks"
 echo " 2) Add a WiFi Network"
-echo " 3) Remove a WiFi Network"
-echo " 4) Set an SSID First"
-echo " 5) Set Network Services Order"
-echo " 6) Scan for WiFi Networks"
-echo " 7) Quit"
+echo " 3) Remove a Preferred WiFi Network"
+echo " 4) Remove all Preferred Wifi Network"
+echo " 5) Move an SSID to Top"
+echo " 6) Set Network Services Order"
+echo " 7) Scan for WiFi Networks"
+echo " 8) Quit"
