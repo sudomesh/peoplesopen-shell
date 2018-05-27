@@ -1,5 +1,13 @@
 #!/bin/bash
-# Script by: Daniel Arauz - May 23, 2018. California.
+
+#Script Name: menu.sh
+
+#Author: Daniel A.
+
+#Date: May 26, 2018
+
+#Description: This script is to add a WiFi network.
+
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Add a WiFi Network:                                                         |"

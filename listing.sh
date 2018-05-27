@@ -1,8 +1,16 @@
 #!/bin/bash
-# Script by: Daniel Arauz - California - May 2018.
+
+#Script Name: menu.sh
+
+#Author: Daniel A.
+
+#Date: May 26, 2018
+
+#Description: This script it is hack to paste the menu on screen. For some reason, the menu.sh only shows the menu once.
+
 clear
 echo "+=============================================================================+"
-echo "| MacOS X Network Settings Adjuster Tool Menu  - by Daniel Arauz - Year:2018  |"
+echo "| MacOS WiFi Network Settings Adjuster Tool                                   |"
 echo "+=============================================================================+"
 echo " 1) Run WiFi Checks"
 echo " 2) Add a WiFi Network"
