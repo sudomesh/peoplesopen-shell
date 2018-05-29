@@ -23,6 +23,7 @@ echo "+- - - - - - - - - - -+"
 read -p "Input the WiFi SSID to REMOVE, then Press [ENTER]: " SSIDvar
 clear
 echo "+- - - - - - - - - - -+"
+echo "If asked, please type the computer user account password."
 sudo networksetup -removepreferredwirelessnetwork "$WiFiDevice" "$SSIDvar"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
