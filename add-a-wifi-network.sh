@@ -12,44 +12,60 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Add a WiFi Network:                                                         |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+
+# Placing IP addresses into ipout.tmp:
+ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout.tmp
+# Removing 127.0.0.1 with sed command: sed 's/127.0.0.1//g' ~/ipout.tmp
+echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout.tmp) - Date: $(date)"
+
 echo
 echo "List of Network Devices:"
 networksetup -listallhardwareports
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Input the WiFi Device (Ex: en0, en1, etc), then press [ENTER]: " WiFiDevice 
+
 clear
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Please wait, WiFi scan in progress..."
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+# Placing IP addresses in ipout.tmp:
+ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout.tmp
+echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout.tmp) - Date: $(date)"
+sudo rm ~/ipout.tmp
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
+# To scan for WiFi networks available:
 AIRPORTTRIGGER="./airport -s"
 $AIRPORTTRIGGER
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Input the SSID to connect to, then Press [ENTER]: " SSIDvar
+
 clear
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Input the '$SSIDvar' WiFi's password, then press [ENTER]:" SSIDWiFiPasswd
 clear
-echo "+- - - - - - - - - - - - - - - - - - - -+"
-echo "Connecting..."
-echo "If asked, input your admin password." 
-echo
-echo "Please wait... process timed to 12 sec."
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "If not logged as root, admin username and password may be required." 
+echo "Please wait... process timed to 11 sec."
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 sudo networksetup -setairportnetwork "$WiFiDevice" "$SSIDvar" "$SSIDWiFiPasswd"
-sleep 12
+sleep 11
 clear
-echo "+- - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Success! The new WiFi Network details:"
-echo "+- - - - - - - - - - - - - - - - - - - -+"
-cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
-AIRPORTTRIGGER="./airport -I"
-$AIRPORTTRIGGER 
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+# To display current WiFi Details:
+AirportCurrentWiFi="./airport -I"
+# Display current WiFi Network:
+$AirportCurrentWiFi
+echo ""
+sleep 1
+# Placing IP addresses into ipout2.tmp, again, because of the previous cd:
+ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout2.tmp
+sleep 1
+echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout2.tmp) - Date: $(date)"
+echo ""
+rm -r ~/ipout2.tmp
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Press [ENTER] to continue"
 clear
-
-
-
-
