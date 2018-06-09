@@ -8,11 +8,10 @@
 
 #Description: This script scans for wifi networks.
 clear
-echo "Computer Hostname: $(hostname) - Scan started on: $(date)"
-echo ""
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Please wait a moment, scanning for available WiFi Networks...               |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "Computer Hostname: $(hostname) - Scan started at: $(date)"
 echo
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 AIRPORTTRIGGER="./airport -s"

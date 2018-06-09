@@ -9,9 +9,24 @@
 #Description: This script it is a menu to run commands to adjust wifi network. Some commands were found online, from different sources.
 
 clear
+# Placing IP address into ipout.tmp:
+ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ipout.tmp
+
+# Removing !P: 127.0.0.1 from ipout.tmp file: 
+# sed 's/FindThisWord/ReplaceWithThisWord/g' file.txt
+# example to find and replace with nothing:
+# sed 's/127.0.0.1//g' ipout.tmp
+
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |" 
 echo "+=============================================================================+"
+
+# Showing Hostname and IP address(es):
+echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ipout.tmp)"
+
+# Removing ipout.tmp file
+rm -r ipout.tmp
+
 PS3='Please input your choice number, then press [ENTER]: '
 options=("WiFi Check" "Add a WiFi Network" "Remove a Preferred WiFi Network" "Remove all Preferred WiFi Networks" "Move an SSID to top" "Set Network Services Order" "Scan for WiFi Networks" "Quit")
 select opt in "${options[@]}"
