@@ -49,18 +49,16 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Success! The new WiFi Network details:"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
+echo ""
 # To display current WiFi Details:
 AirportCurrentWiFi="./airport -I"
 # Display current WiFi Network:
 $AirportCurrentWiFi
 echo ""
 sleep 1
-# Placing IP addresses into ipout2.tmp, again, because of the previous cd:
-ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout2.tmp
-sleep 1
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
