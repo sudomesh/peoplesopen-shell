@@ -12,7 +12,7 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Add a WiFi Network:                                                         |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date:: $(date) |  Hostname: $(hostname)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo ""
 echo "List of Network Devices:"
 networksetup -listallhardwareports
@@ -23,7 +23,7 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Please wait, WiFi scan in progress..."
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date:: $(date) |  Hostname: $(hostname)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo ""
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 # To scan for WiFi networks available:
@@ -55,7 +55,7 @@ sleep 1
 # Placing IP addresses into ipout2.tmp, again, because of the previous cd:
 ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout2.tmp
 sleep 1
-echo "Date:: $(date) |  Hostname: $(hostname)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo ""
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"

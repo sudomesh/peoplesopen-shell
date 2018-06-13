@@ -12,7 +12,7 @@ clear
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |" 
 echo "+=============================================================================+"
-echo "Date:: $(date) |  Hostname: $(hostname)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo ""
 PS3='Please input your choice number, then press [ENTER]: '
 options=("WiFi Check" "Add a WiFi Network" "Remove a Preferred WiFi Network" "Remove all Preferred WiFi Networks" "Move an SSID to top" "Set Network Services Order" "Scan for WiFi Networks" "Quit")

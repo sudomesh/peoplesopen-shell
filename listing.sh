@@ -12,7 +12,7 @@ clear
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |"
 echo "+=============================================================================+"
-echo "Date:: $(date) |  Hostname: $(hostname)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo ""
 echo " 1) WiFi Check"
 echo " 2) Add a WiFi Network"

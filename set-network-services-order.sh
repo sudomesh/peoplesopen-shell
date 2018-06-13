@@ -16,11 +16,11 @@ fi
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| SET NETWORK SERVICES ORDER:                                                 |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo
 echo "+- - - - Current Network Service Order - - - - -+" 
 networksetup -listnetworkserviceorder | cut -d')' -f2 | sed '/^$/d' | sed '1d'
-echo "+- - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo 
 echo
 NumberOfServices=$(networksetup -listnetworkserviceorder | cut -d')' -f2 | sed '/^$/d' | sed '1d' | sed -e 's/^[ \t]*//' | wc -l)

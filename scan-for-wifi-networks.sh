@@ -11,13 +11,13 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Please wait a moment, scanning for available WiFi Networks...               |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Computer Hostname: $(hostname) - Scan started at: $(date)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 AIRPORTTRIGGER="./airport -s"
 $AIRPORTTRIGGER
 echo
-echo "Computer Hostname: $(hostname) - Scan completed at: $(date)"
+echo "Date: $(date) |  Hostname: $(hostname)"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Press enter to continue"

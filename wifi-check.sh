@@ -12,14 +12,20 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Network Services Order:                                                     |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "Date: $(date) |  Hostname: $(hostname)"
+echo ""
 networksetup -listallhardwareports
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| WiFi SSID Network Order:                                                    |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "Date: $(date) |  Hostname: $(hostname)"
+echo ""
 networksetup -listpreferredwirelessnetworks en0
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| WiFi Connection Details:                                                    |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
+echo "Date: $(date) |  Hostname: $(hostname)"
+echo ""
 AIRPORTINTERFACE="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I"
 $AIRPORTINTERFACE
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
