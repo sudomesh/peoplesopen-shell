@@ -12,13 +12,8 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Add a WiFi Network:                                                         |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-
-# Placing IP addresses into ipout.tmp:
-ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout.tmp
-# Removing 127.0.0.1 with sed command: sed 's/127.0.0.1//g' ~/ipout.tmp
-echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout.tmp) - Date: $(date)"
-
-echo
+echo "Date:: $(date) |  Hostname: $(hostname)"
+echo ""
 echo "List of Network Devices:"
 networksetup -listallhardwareports
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
@@ -28,10 +23,8 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Please wait, WiFi scan in progress..."
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-# Placing IP addresses in ipout.tmp:
-ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout.tmp
-echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout.tmp) - Date: $(date)"
-sudo rm ~/ipout.tmp
+echo "Date:: $(date) |  Hostname: $(hostname)"
+echo ""
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 # To scan for WiFi networks available:
 AIRPORTTRIGGER="./airport -s"
@@ -62,9 +55,8 @@ sleep 1
 # Placing IP addresses into ipout2.tmp, again, because of the previous cd:
 ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout2.tmp
 sleep 1
-echo "Hostname: $(hostname) - IP: $(sed 's/127.0.0.1//g' ~/ipout2.tmp) - Date: $(date)"
+echo "Date:: $(date) |  Hostname: $(hostname)"
 echo ""
-rm -r ~/ipout2.tmp
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Press [ENTER] to continue"
