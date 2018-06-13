@@ -12,7 +12,9 @@ clear
 echo "+=============================================================================+"
 echo "| MacOS WiFi Network Settings Adjuster Tool                                   |"
 echo "+=============================================================================+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date: ${RED}$(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo " 1) WiFi Check"
 echo " 2) Add a WiFi Network"

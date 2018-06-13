@@ -12,19 +12,25 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Network Services Order:                                                     |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 networksetup -listallhardwareports
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| WiFi SSID Network Order:                                                    |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 networksetup -listpreferredwirelessnetworks en0
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| WiFi Connection Details:                                                    |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 AIRPORTINTERFACE="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I"
 $AIRPORTINTERFACE

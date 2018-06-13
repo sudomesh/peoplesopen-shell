@@ -12,7 +12,9 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Remove a WiFi Network:                                                      |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo "Current Preferred Wireless Networks:"
 networksetup -listallhardwareports
@@ -20,7 +22,9 @@ echo " "
 read -p "Input the WiFi Device (Ex: en0, en1, etc), then press [ENTER]: " WiFiDevice 
 echo "+- - - - - - - - - - -+"
 clear
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 networksetup -listpreferredwirelessnetworks "$WiFiDevice"
 echo "+- - - - - - - - - - -+"
@@ -29,7 +33,9 @@ echo ""
 read -p "Input the WiFi SSID to REMOVE, then Press [ENTER]: " SSIDvar
 clear
 echo "+- - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo "If asked, please type the computer user account password."
 sudo networksetup -removepreferredwirelessnetwork "$WiFiDevice" "$SSIDvar"

@@ -11,13 +11,18 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Please wait a moment, scanning for available WiFi Networks...               |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
-echo
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
+echo ""
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 AIRPORTTRIGGER="./airport -s"
 $AIRPORTTRIGGER
 echo
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
+echo ""
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Press enter to continue"

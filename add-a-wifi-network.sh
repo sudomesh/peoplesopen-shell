@@ -12,7 +12,9 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "| Add a WiFi Network:                                                         |"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo "List of Network Devices:"
 networksetup -listallhardwareports
@@ -23,7 +25,9 @@ clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "Please wait, WiFi scan in progress..."
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 cd /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/
 # To scan for WiFi networks available:
@@ -31,7 +35,6 @@ AIRPORTTRIGGER="./airport -s"
 $AIRPORTTRIGGER
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Input the SSID to connect to, then Press [ENTER]: " SSIDvar
-
 clear
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 read -p "Input the '$SSIDvar' WiFi's password, then press [ENTER]:" SSIDWiFiPasswd
@@ -55,7 +58,9 @@ sleep 1
 # Placing IP addresses into ipout2.tmp, again, because of the previous cd:
 ifconfig | grep inet -A0 | tail -n3 | awk '{print $3}' | cut -f1 -d'/' > ~/ipout2.tmp
 sleep 1
-echo "Date: $(date) |  Hostname: $(hostname)"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "Date:${RED} $(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
 echo "+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+"
