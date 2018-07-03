@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Script Name: menu.sh
 
@@ -10,48 +10,44 @@
 
 clear
 echo "+=============================================================================+"
-echo "| MacOS WiFi Network Settings Adjuster Tool                                   |" 
+echo "| People's Open Settings Adjuster Tool                                   |" 
 echo "+=============================================================================+"
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 printf "Date: ${RED}$(date)${NC} |  Hostname:${RED}$(hostname)${NC}\n"
 echo ""
-PS3='Please input your choice number, then press [ENTER]: '
-options=("WiFi Check" "Add a WiFi Network" "Remove a Preferred WiFi Network" "Remove all Preferred WiFi Networks" "Move an SSID to top" "Set Network Services Order" "Scan for WiFi Networks" "Quit")
-select opt in "${options[@]}"
+sh listing.sh
+read -p 'Please input your choice number, then press [ENTER]: ' opt
+while :
 do
     case $opt in
-	"WiFi Check")
-		sh wifi-check.sh
-		sh listing.sh
+	"1")
+		sh set-hostname.sh
 		;;
-        "Add a WiFi Network")
-		sh add-a-wifi-network.sh
-		sh listing.sh
+	"2")
+		sh example.sh
 		;;
-	"Remove a Preferred WiFi Network")
-		sh remove-a-preferred-wifi-network.sh
-		sh listing.sh
+        "3")
+		sh example.sh
 		;;
-        "Remove all Preferred WiFi Networks")
-                sh remove-all-preferred-wifi-networks.sh
-                sh listing.sh
+	"4")
+		sh example.sh
+		;;
+        "5")
+                sh example.sh
                 ;;
-        "Move an SSID to top")
-		sh move-ssid-to-top.sh
-                sh listing.sh
+        "6")
+		sh example.sh
                 ;;
-	"Set Network Services Order") 
-		sh set-network-services-order.sh
-                sh listing.sh
-		echo
-		echo
+	"7") 
+		sh example.sh
 		;;
-	"Scan for WiFi Networks")
-                sh scan-for-wifi-networks.sh
-                sh listing.sh
+	"8")
+		clear
+                sh
+		sh menu.sh
                 ;;
-	"Quit")
+	"9")
       		clear
             	break
             	;;
